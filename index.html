@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Sorry</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f8ff;
+            color: #333;
+            padding: 50px;
+        }
+        h1 {
+            color: #ff6f61;
+        }
+        p {
+            font-size: 18px;
+        }
+        .heart {
+            font-size: 50px;
+            color: #ff6f61;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #ff6f61;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #ff3f3f;
+        }
+        .question {
+            display: none;
+            margin-top: 20px;
+        }
+        .question button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .yes {
+            background-color: #28a745;
+            color: white;
+        }
+        .yes:hover {
+            background-color: #218838;
+        }
+        .no {
+            background-color: #dc3545;
+            color: white;
+        }
+        .no:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <h1>I'm Sorry, My Love</h1>
+    <p>Happy International Girlfriend Day!</p>
+    <p>I’m truly sorry for not saying anything earlier. You mean the world to me and I should have made today special for you.</p>
+    <p>Please forgive me ❤️</p>
+    <div class="heart">❤️</div>
+    <button class="btn" onclick="showQuestion()">Forgive Me?</button>
+    <div class="question">
+        <p>Will you forgive me?</p>
+        <button class="yes" onclick="handleYes()">Yes</button>
+        <button class="no" onclick="handleNo()">No</button>
+    </div>
+
+    <script>
+        function showQuestion() {
+            document.querySelector('.question').style.display = 'block';
+        }
+
+        function handleYes() {
+            alert("Thank you for forgiving me! I love you! ❤️");
+        }
+
+        function handleNo() {
+            let forgive = false;
+            while (!forgive) {
+                alert("Please... 🙏");
+                forgive = confirm("Will you forgive me?");
+                if (forgive) {
+                    handleYes();
+                }
+            }
+        }
+    </script>
+</body>
+</html>
